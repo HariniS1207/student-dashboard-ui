@@ -1,14 +1,13 @@
-import Sidebar from "../components/Sidebar"
-import Topbar from "../components/Topbar"
+import Sidebar from '../components/Sidebar'
+import Topbar from '../components/Topbar'
 
 function StudentLayout({ children, setActivePage }) {
   return (
-    <div style={{ display: "flex", height: "100vh" }}>
+    <div style={{ display: 'flex' }}>
       <Sidebar setActivePage={setActivePage} />
-
-      <div style={{ flex: 1, display: "flex", flexDirection: "column" }}>
+      <div style={{ flex: 1 }}>
         <Topbar />
-        <div style={{ padding: "20px", overflowY: "auto" }}>
+        <div style={{ padding: '20px' }}>
           {children}
         </div>
       </div>
