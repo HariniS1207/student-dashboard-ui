@@ -24,18 +24,12 @@ function YearPage({ year }) {
       <h2>{year} Details</h2>
 
       {/* Tabs */}
-      <div style={{ display: "flex", gap: "10px", marginBottom: "20px" }}>
+      <div className="tabs">
         {tabs.map(tab => (
           <div
             key={tab}
+            className={`tab ${activeTab === tab ? "active" : ""}`}
             onClick={() => setActiveTab(tab)}
-            style={{
-              padding: "8px 12px",
-              cursor: "pointer",
-              borderRadius: "4px",
-              backgroundColor: activeTab === tab ? "#0a2540" : "#e6f0ff",
-              color: activeTab === tab ? "white" : "black"
-            }}
           >
             {tab}
           </div>
@@ -44,7 +38,7 @@ function YearPage({ year }) {
 
       {/* CONTENT */}
       {activeTab === "Academics" && (
-        <div style={{ display: "flex", gap: "20px" }}>
+        <div style={{ display: "flex", gap: "20px", flexWrap: "wrap" }}>
           <SemesterCard
             title="Semester 1"
             data={academicData["1st Year"].sem1}

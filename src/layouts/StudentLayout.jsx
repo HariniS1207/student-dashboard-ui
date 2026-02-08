@@ -3,12 +3,12 @@ import Topbar from "../components/Topbar"
 
 function StudentLayout({ children, setActivePage }) {
   return (
-    <div style={{ display: "flex", height: "100vh" }}>
+    <div className="app-container">
       <Sidebar setActivePage={setActivePage} />
 
-      <div style={{ flex: 1, display: "flex", flexDirection: "column" }}>
+      <div className="main-content">
         <Topbar />
-        <div style={{ padding: "20px", overflowY: "auto" }}>
+        <div className="content-area">
           {children}
         </div>
       </div>

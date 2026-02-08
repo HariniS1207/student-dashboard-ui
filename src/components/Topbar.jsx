@@ -1,12 +1,18 @@
+import { studentData } from "../data/studentData"
+
 function Topbar() {
   return (
     <div style={{
-      height: "50px",
+      height: "60px",
       backgroundColor: "white",
-      borderBottom: "1px solid #ccc",
-      padding: "10px"
+      borderBottom: "1px solid #ddd",
+      padding: "15px 25px",
+      display: "flex",
+      alignItems: "center"
     }}>
-      <h3>Student Dashboard</h3>
+      <h2 style={{ margin: 0 }}>
+        {studentData.name}’s Dashboard
+      </h2>
     </div>
   )
 }

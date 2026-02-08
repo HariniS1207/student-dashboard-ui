@@ -7,12 +7,29 @@ function Home() {
       <h2>Student Dashboard Home</h2>
       <p>Welcome <b>{studentData.name}</b> ({studentData.registerNo})</p>
 
-      <div style={{ display: "flex", gap: "20px", marginTop: "20px" }}>
-        <Card title="CGPA" value={reportData.overallCGPA} />
-        <Card title="Attendance" value={reportData.avgAttendance + "%"} />
-        <Card title="Projects" value={reportData.totalProjects} />
-        <Card title="Certifications" value={reportData.totalCertifications} />
-      </div>
+      <div className="dashboard-grid">
+  <div className="dashboard-card">
+    <h4>CGPA</h4>
+    <h1>{reportData.overallCGPA}</h1>
+  </div>
+
+  <div className="dashboard-card">
+    <h4>Attendance</h4>
+    <h1>{reportData.avgAttendance}%</h1>
+  </div>
+
+  <div className="dashboard-card">
+    <h4>Projects</h4>
+    <h1>{reportData.totalProjects}</h1>
+  </div>
+
+  <div className="dashboard-card">
+    <h4>Certifications</h4>
+    <h1>{reportData.totalCertifications}</h1>
+  </div>
+</div>
+
+
     </div>
   )
 }
