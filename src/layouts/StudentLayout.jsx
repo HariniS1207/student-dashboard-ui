@@ -1,10 +1,10 @@
 import Sidebar from "../components/Sidebar"
 import Topbar from "../components/Topbar"
 
-function StudentLayout({ children, setActivePage }) {
+function StudentLayout({ children, setActivePage, activePage }) {
   return (
     <div className="app-container">
-      <Sidebar setActivePage={setActivePage} />
+      <Sidebar activePage={activePage} setActivePage={setActivePage} />
 
       <div className="main-content">
         <Topbar />
