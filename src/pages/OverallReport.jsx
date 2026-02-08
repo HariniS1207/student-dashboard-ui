@@ -1,28 +1,26 @@
-import ReportBanner from "../components/ReportBanner"
-import SectionCard from "../components/SectionCard"
+import { studentData } from "../data/studentData"
+import { reportData } from "../data/reportData"
 
 function OverallReport() {
   return (
-    <>
-      <ReportBanner
-        title="Overall Performance Report"
-        description="This report summarizes your academic journey from Year 1 to Year 4"
-        actionText="Download PDF"
-        onAction={() => alert("PDF download triggered")}
-      />
+    <div style={{
+      backgroundColor: "white",
+      padding: "30px",
+      maxWidth: "700px",
+      margin: "auto",
+      border: "1px solid #ccc"
+    }}>
+      <h2 style={{ textAlign: "center" }}>Overall Performance Report</h2>
 
-      <SectionCard title="Academic Summary">
-        CGPA: 8.7 <br />
-        Attendance: 92% <br />
-        Projects Completed: 10
-      </SectionCard>
+      <p><b>Name:</b> {studentData.name}</p>
+      <p><b>Register No:</b> {studentData.registerNo}</p>
+      <p><b>CGPA:</b> {reportData.overallCGPA}</p>
+      <p><b>Average Attendance:</b> {reportData.avgAttendance}%</p>
 
-      <SectionCard title="Achievements">
-        🏆 Hackathon Finalist <br />
-        📜 6 Professional Certifications <br />
-        💼 2 Internships Completed
-      </SectionCard>
-    </>
+      <button style={{ marginTop: "20px" }}>
+        Download Report
+      </button>
+    </div>
   )
 }
 
