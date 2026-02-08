@@ -1,19 +1,14 @@
-import Sidebar from "../components/Sidebar"
-import Topbar from "../components/Topbar"
+import Sidebar from "../components/Sidebar";
+import Header from "../components/header";
 
-function StudentLayout({ children, setActivePage }) {
+export default function StudentLayout({ children }) {
   return (
-    <div className="app-container">
-      <Sidebar setActivePage={setActivePage} />
-
-      <div className="main-content">
-        <Topbar />
-        <div className="content-area">
-          {children}
-        </div>
+    <div className="layout">
+      <Sidebar />
+      <div className="main">
+        <Header />
+        {children}
       </div>
     </div>
-  )
+  );
 }
-
-export default StudentLayout
