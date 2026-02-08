@@ -1,0 +1,3 @@
+// Layout Components
+export { default as StudentLayout } from "./StudentLayout"
+export { default as ReportLayout } from "./ReportLayout"
